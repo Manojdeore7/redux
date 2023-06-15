@@ -1,21 +1,21 @@
 import classes from "./Counter.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { sliceActions } from "../strore/index";
+import { sliceCounterActions } from "../strore/index";
 const Counter = () => {
-  let counter = useSelector((state) => state.counter);
-  let show = useSelector((state) => state.show);
+  let counter = useSelector((state) => state.counter.counter);
+  let show = useSelector((state) => state.counter.show);
   let dispatch = useDispatch();
   const toggleCounterHandler = () => {
-    dispatch(sliceActions.toggle());
+    dispatch(sliceCounterActions.toggle());
   };
   const onIncreamentHandler = () => {
-    dispatch(sliceActions.increment());
+    dispatch(sliceCounterActions.increment());
   };
   const ondecreamentHandler = () => {
-    dispatch(sliceActions.decrement());
+    dispatch(sliceCounterActions.decrement());
   };
   const onIncreaseHandler = () => {
-    dispatch(sliceActions.increase(5));
+    dispatch(sliceCounterActions.increase(5));
   };
 
   return (
