@@ -1,6 +1,6 @@
 import classes from "./Counter.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { sliceCounterActions } from "../strore/index";
+import { sliceCounterActions } from "../strore/Counter";
 const Counter = () => {
   let counter = useSelector((state) => state.counter.counter);
   let show = useSelector((state) => state.counter.show);
